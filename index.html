@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8"/>
+	<title>HOME</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        setTimeout(function(){
+            
+            var typingBool = false; 
+            var typingIdx=0; 
+
+            var typingTxt = $(".typing-txt").text(); 
+            typingTxt=typingTxt.split("");
+
+            if(typingBool==false){ 
+                 typingBool=true;
+                 var tyInt = setInterval(typing,100);  
+            }
+                
+            function typing(){ 
+            if(typingIdx < typingTxt.length){ 
+                $(".typing").append(typingTxt[typingIdx]);
+                typingIdx++;}
+            else{ 
+                clearInterval(tyInt)}
+            }
+        },2000);   
+    </script>
+    </head>
+    <body>
+    <div class="wrapper">
+        <header>
+            <nav class="nav_clear"> 
+                <ul class="ul_clear">
+                    <li><a href="index.html" id="pos">HOME</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="inform">
+                <div class="bmain">
+                    <div class="hi">
+                        <h1>Hello!</h1>
+                        <p><span>I'm a Web Designer based out of Seoul, Korea. <br>I design based on Passion, Creativity and Trendiness.<br> If you want contact me, please fill the contact form and send it to me.<br>Thank you for visiting my page.</span></p><br><br>
+                        <p><span>안녕하세요. 저는 서울에 거주하는 웹 디자이너 이수현입니다. <br>열정, 창의성, 트렌디한 감각을 기반으로 디자인하고 있습니다. <br>연락을 원하신다면 contact form을 작성하여 보내주시면 됩니다. <br>제 페이지를 방문해주셔서 감사합니다.</span></p>
+                        <a href="contact.html"><button type="button">작성하기</button></a>
+                    </div>                
+                    <div class="box">
+                        <div class="container">
+                            <h2>Web Designer</h2>
+                            <span class="typing-txt">"창의와 열정, 소통으로 디자인합니다."</span>
+                            <span class="typing"></span>
+                            <p>이수현</p>
+                            <address>Contact Me |   <a href="mailto:shleex959@naver.com">shleex959@naver.com</a></address>
+                            
+                            <img src="images/iphoto_nobg.png">
+                        </div> <!--container end-->
+                    </div><!--box end-->
+                </div> <!--bmain end-->
+        </section>
+
+        <section class="banner">
+            <div>
+                <h2>ABOUT PAGE</h2>
+                <p>페이지 구성 둘러보기</p>
+            </div>
+            <div class="slidebox">
+                <input type="radio" name="slide" id="s01" checked>
+                <input type="radio" name="slide" id="s02">
+                <input type="radio" name="slide" id="s03">
+                <ul class="slidelist">
+                    <li class="slideitem">
+                        <a href="portfolio.html">
+                            <label for="s03" class="prev"></label>
+                            <img src="images/banner1.png">
+                            <label for="s02" class="next"></label>
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a href="profile.html">
+                            <label for="s01" class="prev"></label>
+                            <img src="images/banner2.png">
+                            <label for="s03" class="next"></label>
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a href="contact.html">
+                            <label for="s02" class="prev"></label>
+                            <img src="images/banner3.png">
+                            <label for="s01" class="next"></label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        </main>
+        <footer>
+            <p>Copyrights &copy; LEESUHYEON&nbsp;&nbsp;&nbsp; All rights reserved.</p>
+        </footer>
+     </div> <!-- wrapper end -->
+</body>
+</html>
